@@ -21,6 +21,8 @@ namespace SistemaPrayaga.Application
 
             await _unitOfWork.Repository<Carrera>().Add(carreraEntity);
 
+            await _unitOfWork.SaveEntitiesAsync();
+
             return carreraEntity.id;
         }
     }

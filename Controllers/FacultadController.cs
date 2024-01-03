@@ -19,5 +19,14 @@ namespace SistemaPrayaga
             var result = await _mediator.Send(command);
             return CreatedAtAction(nameof(Create), result);
         }
+
+        [HttpPut]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> Create(UpdateFacultadComand command)
+        {
+            var result = await _mediator.Send(command);
+            return Ok(result);
+        }
     }
 }

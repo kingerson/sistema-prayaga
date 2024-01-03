@@ -21,6 +21,8 @@ namespace SistemaPrayaga.Application
 
             await _unitOfWork.Repository<Facultad>().Add(factultadEntity);
 
+            await _unitOfWork.SaveEntitiesAsync();
+
             return factultadEntity.id;
         }
     }

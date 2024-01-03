@@ -63,7 +63,7 @@ namespace SistemaPrayaga.Infraestructure
         }
 
 
-        public async Task<T?> GetById(Guid id)
+        public async Task<T?> GetById(int id)
         {
             return await _context.Set<T>().FindAsync(id);
         }

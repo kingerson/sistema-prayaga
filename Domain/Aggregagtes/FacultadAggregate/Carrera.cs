@@ -12,5 +12,12 @@ namespace SistemaPrayaga.Domain
             nombre_carrera = nombre;
             codigo_carrera = codigo;
         }
+
+        public void Update(int idFacultad,string nombre , string codigo)
+        {
+            id_facultad = idFacultad;
+            nombre_carrera = nombre;
+            codigo_carrera = codigo;
+        }
     }
 }
